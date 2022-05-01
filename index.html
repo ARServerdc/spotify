@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta property="og:image" content="/staticfiles/images/Link-preview.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="icon" href="13.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+
+    <style>
+        .mouse-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  visibility: hidden;
+}
+
+.cursor-in {
+  margin-left: 2px;
+  margin-top: 2px;
+  width: 6px;
+  height: 6px;
+  z-index: 10000001;
+  background-color: #00ff04;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+    margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+    margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.cursor-in.cursor-pointer-hover {
+  margin-left: -40px;
+  margin-top: -40px;
+  width: 80px;
+  height: 80px;
+  background-color: #00ff04;
+  opacity: 0.3;
+}
+
+.cursor-out {
+  margin-left: -15px;
+  margin-top: -15px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #00ff04;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 10000000;
+  opacity: 0.5;
+  -webkit-transition: all 0.08s ease-out;
+  transition: all 0.08s ease-out;
+}
+
+.cursor-out.cursor-pointer-hover {
+  opacity: 0;
+}
+
+    </style>
+
+
+ <script>
+      function mousecursor() {
+            if ($("body")) {
+                const e = document.querySelector(".cursor-in"),
+                    t = document.querySelector(".cursor-out");
+                let n, i = 0,
+                    o = !1;
+                window.onmousemove = function (s) {
+                    o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
+                }, $("body").on("mouseenter", ".team-member-img, .arrow_right, .arrow_left, .clients-logo, .service-img, a, .cursor-pointer", function () {
+                    e.classList.add("cursor-pointer-hover"), t.classList.add("cursor-pointer-hover")
+                }), $("body").on("mouseleave", ".team-member-img, .arrow_right, .arrow_left, .clients-logo, .service-img, a, .cursor-pointer", function () {
+                    $(this).is(".team-member-img, .arrow_right, .arrow_left, .clients-logo, .service-img, a") && $(this).closest(".cursor-pointer").length || (e.classList.remove("cursor-pointer-hover"), t.classList.remove("cursor-pointer-hover"))
+                }), e.style.visibility = "visible", t.style.visibility = "visible"
+            }
+        };
+        
+        $(function () {
+            mousecursor();
+        });
+ </script>
+
+
+
+
+</head>
+<body>
+
+
+    <style>
+        body { 
+            background-color: #0d0d0d;
+        }
+    </style>
+
+    <!-- PreLoder Part Start -->
+
+    <div id="preloader"></div>
+
+    <!-- PreLoder Part End -->
+
+    <!-- Menu And Logo Part Start -->
+
+    <header class="logo-menu" id="home">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-3 col-sm-3 col-md-3">
+                    <div class="top-header-left">
+                        <div class="toggle-social text-center">
+                            <img src="/staticfiles/images/Top-bar-Buttom-Social-off.png" alt="">
+                        </div>
+                        <div class="social-menu">
+                           
+                               
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-6 col-sm-6 col-md-6 col-xl-4">
+                    <div class="logo text-center">
+                        <a href="/"><img src="/staticfiles/images/Top-bar-ZE-Logo.png" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-3 col-sm-3 col-md-3 col-xl-4">
+                    <div class="top-bar-right">
+                        <div class="toggle-class text-center">
+                            <img src="/staticfiles/images/Top-bar-Buttom-Menu-off.png" alt="">
+                        </div>
+
+                        <div class="main-menu">
+                            <ul>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu And Logo Part End -->
+
+    <!-- Error Start -->
+<!-- 
+    <style>
+        .error-img {
+            padding-left: 30%;
+            padding-right: 30%;
+        }
+    </style> -->
+
+    <section id="error-sec">
+        <div class="container">
+            <div class="error-img text-center">
+                <img src="https://cdn.discordapp.com/attachments/969459723613126708/969460801624744016/unknown-20.png" alt="">
+            </div>
+            <!-- <div class="row">
+                <div class="col-lg-12">
+                    <div class="error-button text-center">
+                        <a href="/">Go back</a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Error End -->
+
+    <section id="close-click">
+
+    
+    
+    
+    <!-- Cursor Part Start -->
+
+
+
+
+        
+        <div class="mouse-cursor cursor-out"></div>
+        <div class="mouse-cursor cursor-in"></div>
+        
+    <!-- Cursor Part End -->
+
+    <!-- Footer Part Start -->
+
+    <style>
+        .foot {
+      margin-top: 1rem;
+        }
+        .error-button a {
+            font-size: 1.35rem !important;
+            padding: 10px 45px 8px 45px !important;
+            color: #949494;
+            /* box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(71, 71, 71, 0.9);  */
+        }
+        .error-button a:hover {
+
+            color: #0d0d0d; 
+            background: #59ff00;
+            box-shadow: 0 0.5rem 1.125rem -0.5rem #59ff00; 
+        }
+    </style>
+
+    <footer id="footer-sec">
+        <div class="container foot">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-12">
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="error-button text-center">
+                                <a href="https://discord.gg/6Y89kzxGnV">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="footer-copyright text-center">
+                        <p>copyright © all right reserved by <a href="https://itsme360.github.io/360">@itsme360</a></p>
+                    </div>
+                    <!-- <div class="footer-developer text-center">
+                        <p>developer by <span>nanav & darkid</span></p>
+                    </div> -->
+                </div>
+
+                
+
+            </div>
+        </div>
+         <!-- <a href="#" class="to-top">
+           <img src="/staticfiles/images/TopButton.svg" alt="">
+       </a> -->
+    </footer>
+    <!-- Footer Part Start -->
+    
+    </section>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/pace.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
